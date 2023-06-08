@@ -80,6 +80,28 @@ switch:
     optimistic: true
 ```  
 
+Configuration can differ between different versions of the board. I got my relays working with the following configuration (gpio instead of uart):
+
+``` 
+switch:
+  - platform: gpio
+    name: 'relay1'
+    id: relay1
+    pin: GPIO12
+  - platform: gpio
+    name: 'relay2'
+    id: relay2
+    pin: GPIO13
+  - platform: gpio
+    name: 'relay3'
+    id: relay3
+    pin: GPIO14
+  - platform: gpio
+    name: 'relay4'
+    id: relay4
+    pin: GPIO16
+``` 
+
 ## Configuration with momentary switches (push buttons with 1 sek press time)
 
 ```yaml
